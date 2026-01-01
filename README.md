@@ -2,9 +2,9 @@
 
 My personal portfolio showcasing projects, experience, and skills in DevOps, AI/ML, and cloud-native engineering.
 
-**Live Site:** [Add your deployed URL here]
+**Live Site:** https://euphoricfenix.github.io/portfolio_page/
 
-![Portfolio Preview](favicon-512.png)
+![Portfolio Preview](favicon.ico)
 
 ## 🚀 About
 
