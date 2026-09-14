@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Experience — Viraj Virk (concept)</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="proto-banner">
+    <span>prototype / concept test — not the live site</span>
+    <a href="../index.html">&larr; back to current portfolio</a>
+</div>
+
+<header class="topbar">
+    <div class="topbar-inner">
+        <a class="brand" href="index.html">Viraj Virk <span>/ the farm</span></a>
+        <nav>
+            <a href="index.html"><span class="nav-main">The Land</span><span class="nav-sub">home</span></a>
+            <a href="projects.html"><span class="nav-main">The Fields</span><span class="nav-sub">projects</span></a>
+            <a class="on" href="experience.html"><span class="nav-main">Seasons</span><span class="nav-sub">experience</span></a>
+            <a href="skills.html"><span class="nav-main">The Toolshed</span><span class="nav-sub">skills</span></a>
+        </nav>
+    </div>
+</header>
+
+<div class="wrap">
+    <section class="phead">
+        <div class="eyebrow">Experience · seasons</div>
+        <h1>Four seasons, <span class="hollow">seed to harvest.</span></h1>
+        <p class="lede">
+            Read oldest first — a research lab, then a startup R&amp;D team, then client work,
+            then a government-scale platform. Each one grew out of the last.
+        </p>
+    </section>
+
+    <section class="band">
+        <div class="seasons">
+
+            <!-- ===== season 1 — seed ===== -->
+            <div class="season">
+                <svg class="season-art" viewBox="0 0 150 150" aria-hidden="true">
+                    <line x1="25" y1="132" x2="125" y2="132" stroke="var(--soil)" stroke-width="6" stroke-linecap="round"/>
+                    <g stroke="var(--soil-dark)" stroke-width="7" stroke-linecap="round" fill="none">
+                        <path d="M 75 132 L 75 74"/>
+                    </g>
+                    <g stroke="var(--soil-dark)" stroke-width="4" stroke-linecap="round" fill="none">
+                        <path d="M 75 96 L 54 76"/><path d="M 75 88 L 96 66"/>
+                        <path d="M 75 108 L 57 98"/><path d="M 75 80 L 88 60"/>
+                    </g>
+                    <g fill="var(--crop)">
+                        <circle cx="54" cy="76" r="3.5"/><circle cx="96" cy="66" r="3.5"/>
+                        <circle cx="57" cy="98" r="3"/><circle cx="88" cy="60" r="3"/>
+                        <circle cx="75" cy="72" r="3"/>
+                    </g>
+                </svg>
+                <div class="season-meta">
+                    <div class="season-tag">Seed</div>
+                    <div class="season-when">Aug 2023 – Nov 2023</div>
+                </div>
+                <div class="season-body">
+                    <h3>Research Intern</h3>
+                    <div class="who">CSIR–CSIO Chandigarh</div>
+                    <p>
+                        Built and trained computer vision models from scratch for stereo image depth analysis,
+                        comparing monocular and YOLO-based approaches against a research timeline. First time
+                        owning a model end to end rather than following a tutorial.
+                    </p>
+                    <div class="stems"><span class="stem">CNNs</span><span class="stem">YOLO</span><span class="stem">Computer Vision</span><span class="stem">Research</span></div>
+                    <button class="more-btn" data-modal="s1">more on this season</button>
+                    <dialog class="sheet" id="s1">
+                        <button class="sheet-close" aria-label="Close">&times;</button>
+                        <div class="sheet-inner">
+                            <div class="sheet-kicker">CSIR–CSIO Chandigarh</div>
+                            <h4>Research Intern</h4>
+                        <div class="more-body">
+                            <dl>
+                                <dt>The work</dt>
+                                <dd>Deep learning models for stereo image depth analysis, built and trained from scratch rather than fine-tuned, so I had to understand what each layer contributed instead of treating the network as a black box.</dd>
+                                <dt>Approach</dt>
+                                <dd>Explored several routes in parallel — monocular depth estimation and YOLO-based detection among them — and compared them against each other under a fixed research timeline.</dd>
+                                <dt>What it taught me</dt>
+                                <dd>That most of the difficulty in an ML problem is upstream of the model: how the data is captured, aligned and cleaned decides the ceiling before training starts. That lesson is why I ended up doing pipeline work.</dd>
+                            </dl>
+                        </div>
+                        </div>
+                    </dialog>
+                </div>
+            </div>
+
+            <!-- ===== season 2 — spring ===== -->
+            <div class="season">
+                <svg class="season-art" viewBox="0 0 150 150" aria-hidden="true">
+                    <line x1="25" y1="132" x2="125" y2="132" stroke="var(--soil)" stroke-width="6" stroke-linecap="round"/>
+                    <g stroke="var(--soil-dark)" stroke-width="7" stroke-linecap="round" fill="none">
+                        <path d="M 75 132 L 75 74"/>
+                    </g>
+                    <g stroke="var(--soil-dark)" stroke-width="4" stroke-linecap="round" fill="none">
+                        <path d="M 75 96 L 54 76"/><path d="M 75 88 L 96 66"/><path d="M 75 108 L 57 98"/>
+                    </g>
+                    <g fill="var(--blossom)" opacity="0.95">
+                        <circle cx="75" cy="56" r="17"/><circle cx="55" cy="66" r="13"/><circle cx="96" cy="62" r="14"/>
+                        <circle cx="66" cy="46" r="10"/><circle cx="88" cy="46" r="9"/>
+                    </g>
+                    <g fill="var(--paper)" opacity="0.75">
+                        <circle cx="70" cy="52" r="3"/><circle cx="84" cy="58" r="2.6"/><circle cx="58" cy="64" r="2.6"/>
+                    </g>
+                </svg>
+                <div class="season-meta">
+                    <div class="season-tag">Spring</div>
+                    <div class="season-when">Mar 2025 – Jul 2025</div>
+                </div>
+                <div class="season-body">
+                    <h3>Generative AI Applications Developer</h3>
+                    <div class="who">Sentellent</div>
+                    <p>
+                        Backend for an audio-analysis platform — stem separation, transcription and forced
+                        alignment orchestrated as one pipeline — then a multi-tenant long-term memory layer
+                        for an existing RAG chatbot. Deployed cloud-native on AWS.
+                    </p>
+                    <div class="stems"><span class="stem">Demucs</span><span class="stem">mem0</span><span class="stem">pgvector</span><span class="stem">AWS</span></div>
+                    <button class="more-btn" data-modal="s2">more on this season</button>
+                    <dialog class="sheet" id="s2">
+                        <button class="sheet-close" aria-label="Close">&times;</button>
+                        <div class="sheet-inner">
+                            <div class="sheet-kicker">Sentellent</div>
+                            <h4>Generative AI Applications Developer</h4>
+                        <div class="more-body">
+                            <dl>
+                                <dt>First stream</dt>
+                                <dd>Backend for an audio-analysis platform: faster audio ingestion, better transcription, 4-stem separation with Demucs, and CTC forced alignment for accurate timestamps. Separation turned out to fix the existing chord detection by feeding it isolated tracks rather than a mixed signal.</dd>
+                                <dt>Second stream</dt>
+                                <dd>A multi-tenant long-term memory layer for an existing RAG chatbot using mem0 — JWT-scoped access, per-tenant vector database routing, pgvector storage, and a shareable flag deciding what context may cross a tenant boundary.</dd>
+                                <dt>Ownership</dt>
+                                <dd>Deployment was mine too: Step Functions orchestrating Lambda and EC2, with RDS and DynamoDB behind it, plus the environment setup, configuration and monitoring.</dd>
+                                <dt>Also</dt>
+                                <dd>Prompt engineering and model evaluation with the R&amp;D team, and the technical documentation internal teams actually had to use.</dd>
+                            </dl>
+                        </div>
+                        </div>
+                    </dialog>
+                </div>
+            </div>
+
+            <!-- ===== season 3 — summer ===== -->
+            <div class="season">
+                <svg class="season-art" viewBox="0 0 150 150" aria-hidden="true">
+                    <line x1="25" y1="132" x2="125" y2="132" stroke="var(--soil)" stroke-width="6" stroke-linecap="round"/>
+                    <g stroke="var(--soil-dark)" stroke-width="7" stroke-linecap="round" fill="none">
+                        <path d="M 75 132 L 75 78"/>
+                    </g>
+                    <g fill="var(--crop)">
+                        <ellipse cx="75" cy="58" rx="34" ry="26"/>
+                        <ellipse cx="50" cy="70" rx="20" ry="16"/>
+                        <ellipse cx="100" cy="68" rx="21" ry="17"/>
+                    </g>
+                    <g fill="var(--crop-light)" opacity="0.7">
+                        <ellipse cx="66" cy="48" rx="14" ry="10"/>
+                        <ellipse cx="92" cy="58" rx="11" ry="8"/>
+                    </g>
+                </svg>
+                <div class="season-meta">
+                    <div class="season-tag">Summer</div>
+                    <div class="season-when">Aug 2025 – Dec 2025</div>
+                </div>
+                <div class="season-body">
+                    <h3>Part-Time Developer</h3>
+                    <div class="who">Freelance / Contract</div>
+                    <p>
+                        A production ETL scraper loading structured data into SQL on a schedule, a full website
+                        redesign for a policy think tank run directly with the client, and RLHF-related technical
+                        tasks supporting LLM training — each independently reviewed for quality.
+                    </p>
+                    <div class="stems"><span class="stem">Python</span><span class="stem">ETL</span><span class="stem">RLHF</span><span class="stem">Client Work</span></div>
+                    <button class="more-btn" data-modal="s3">more on this season</button>
+                    <dialog class="sheet" id="s3">
+                        <button class="sheet-close" aria-label="Close">&times;</button>
+                        <div class="sheet-inner">
+                            <div class="sheet-kicker">Freelance / Contract</div>
+                            <h4>Part-Time Developer</h4>
+                        <div class="more-body">
+                            <dl>
+                                <dt>Early-stage startup</dt>
+                                <dd>A production ETL pipeline — a scraper that extracts, cleans and loads structured e-commerce design data into a SQL database, running on a schedule with error handling built for the failures that actually happen rather than the ones that look good in a diagram.</dd>
+                                <dt>Policy think tank</dt>
+                                <dd>A full website redesign, run directly with the client: sitting in the meetings, translating what stakeholders wanted into something implementable, and improving accessibility for researchers using it.</dd>
+                                <dt>Dusker AI</dt>
+                                <dd>RLHF-related technical tasks supporting LLM training — terminal automation, benchmarking, tooling development, script execution and troubleshooting, with every task independently reviewed and approved for quality.</dd>
+                                <dt>What it taught me</dt>
+                                <dd>Client work is mostly translation. The technical part is rarely the bottleneck; agreeing on what "done" means is.</dd>
+                            </dl>
+                        </div>
+                        </div>
+                    </dialog>
+                </div>
+            </div>
+
+            <!-- ===== season 4 — harvest ===== -->
+            <div class="season">
+                <svg class="season-art" viewBox="0 0 150 150" aria-hidden="true">
+                    <line x1="25" y1="132" x2="125" y2="132" stroke="var(--soil)" stroke-width="6" stroke-linecap="round"/>
+                    <g stroke="var(--soil-dark)" stroke-width="7" stroke-linecap="round" fill="none">
+                        <path d="M 75 132 L 75 78"/>
+                    </g>
+                    <g fill="var(--wheat)">
+                        <ellipse cx="75" cy="58" rx="34" ry="26"/>
+                        <ellipse cx="50" cy="70" rx="20" ry="16"/>
+                        <ellipse cx="100" cy="68" rx="21" ry="17"/>
+                    </g>
+                    <g fill="var(--barn)" opacity="0.55">
+                        <ellipse cx="64" cy="50" rx="12" ry="9"/>
+                        <ellipse cx="94" cy="60" rx="10" ry="7"/>
+                    </g>
+                    <g fill="var(--wheat)">
+                        <ellipse class="leaf" cx="48" cy="88"  rx="5" ry="3" style="animation-delay:-1s"/>
+                        <ellipse class="leaf" cx="92" cy="92"  rx="5" ry="3" style="animation-delay:-3.5s"/>
+                        <ellipse class="leaf" cx="70" cy="96"  rx="4" ry="2.6" style="animation-delay:-5.5s"/>
+                    </g>
+                </svg>
+                <div class="season-meta">
+                    <div class="season-tag">Harvest · now</div>
+                    <div class="season-when">Jan 2026 – Present</div>
+                </div>
+                <div class="season-body">
+                    <h3>Full Stack Developer</h3>
+                    <div class="who">Kudzu Infotech — Contractor for Deloitte (Goa IDC)</div>
+                    <p>
+                        A government-scale enterprise platform for the Goa Industrial Development Corporation.
+                        Python backend services powering a RAG-based LLM compliance agent, ETL pipelines over
+                        multi-layer industrial drawing files, and the CV and graph models behind compliance
+                        reasoning — inside a compliance-audited delivery model.
+                    </p>
+                    <div class="stems"><span class="stem">Python</span><span class="stem">RAG</span><span class="stem">ezdxf</span><span class="stem">GNN</span><span class="stem">Enterprise</span></div>
+                    <button class="more-btn" data-modal="s4">more on this season</button>
+                    <dialog class="sheet" id="s4">
+                        <button class="sheet-close" aria-label="Close">&times;</button>
+                        <div class="sheet-inner">
+                            <div class="sheet-kicker">Kudzu Infotech — Contractor for Deloitte (Goa IDC)</div>
+                            <h4>Full Stack Developer</h4>
+                        <div class="more-body">
+                            <dl>
+                                <dt>The platform</dt>
+                                <dd>Python backend services powering a RAG-based LLM compliance agent — Llama models orchestrated through LangChain — for the Goa Industrial Development Corporation.</dd>
+                                <dt>Data problem</dt>
+                                <dd>ETL pipelines using ezdxf over multi-layer industrial drawing files, extracting, validating and transforming geometry so that floor plans, site plans and elevations come out consistent regardless of how the source file was organised.</dd>
+                                <dt>Models</dt>
+                                <dd>CNN-based entity detection, StyleGAN for synthetic training data where real samples were thin, and Graph Neural Networks modelling relationships between drawing elements so the compliance reasoning sees structure rather than isolated shapes.</dd>
+                                <dt>Integration</dt>
+                                <dd>Stitching CV models, LLM services and structured data pipelines together through internal APIs, then troubleshooting and tuning them as the system scales.</dd>
+                                <dt>How it's delivered</dt>
+                                <dd>A Deloitte-contracted, compliance-audited model, working in a cross-functional team with product managers, designers and AI engineers on Agile-aligned review cycles — the constraint shapes the engineering as much as the requirements do.</dd>
+                            </dl>
+                        </div>
+                        </div>
+                    </dialog>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</div>
+
+<footer>
+    <div class="gate-head">Open the gate</div>
+    <p>Open to conversations about backend, AI/LLM, and DevOps engineering work.</p>
+    <div class="gate-links">
+        <a href="mailto:virajvirk7@gmail.com">Email</a>
+        <a href="https://linkedin.com/in/virajvirk" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/euphoricfenix" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <div class="fineprint">concept prototype · original SVG illustration · <a href="../index.html">current portfolio</a></div>
+</footer>
+
+<script src="app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,561 @@
+/* ============================================================
+   farm concept — shared styles
+   ============================================================ */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+    --paper:      #faf6ef;
+    --paper-warm: #f2ebdf;
+    --sky:        #e4f0f4;
+    --sky-low:    #f6f1e6;
+    --ground:     #cfdcb4;
+    --ground-alt: #bccfa0;
+    --soil:       #7a5a41;
+    --soil-dark:  #5d4330;
+    --water:      #3fa3c4;
+    --water-pale: #b8dfec;
+    --crop:       #6f9e4c;
+    --crop-light: #93c265;
+    --wheat:      #d3a03a;
+    --barn:       #a8503f;
+    --barn-dark:  #8a3f31;
+    --blossom:    #e2a0b4;
+    --ink:        #2c2823;
+    --ink-dim:    #726858;
+    --rule:       #ded3c2;
+}
+
+html { font-size: 17px; }
+
+body {
+    font-family: 'IBM Plex Sans', sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    font-size: 1.02rem;
+    line-height: 1.68;
+    overflow-x: hidden;
+}
+
+.wrap { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+
+/* ---------- prototype banner ---------- */
+
+.proto-banner {
+    background: var(--ink);
+    color: var(--paper);
+    font-family: 'Fira Code', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 1px;
+    padding: 0.55rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.proto-banner a { color: var(--water-pale); }
+
+/* ---------- nav ---------- */
+
+.topbar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(250, 246, 239, 0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--rule);
+    padding: 1rem 1.5rem;
+}
+
+.topbar-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.brand {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: var(--ink);
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.brand span { color: var(--ink-dim); font-weight: 400; }
+
+.topbar nav { display: flex; gap: 2rem; flex-wrap: wrap; }
+
+.topbar nav a {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    color: var(--ink-dim);
+    text-decoration: none;
+    padding-bottom: 3px;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+}
+
+.nav-main { font-size: 0.95rem; font-weight: 500; line-height: 1.2; }
+
+.nav-sub {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.64rem;
+    letter-spacing: 0.6px;
+    opacity: 0.65;
+    line-height: 1.2;
+}
+
+.topbar nav a:hover { color: var(--ink); border-bottom-color: var(--crop); }
+.topbar nav a.on { color: var(--ink); border-bottom-color: var(--water); }
+
+/* ---------- page headers ---------- */
+
+.phead { padding: 4rem 0 1rem; }
+
+.eyebrow {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--ink-dim);
+    margin-bottom: 1.15rem;
+}
+
+h1 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: clamp(2.1rem, 5.2vw, 4rem);
+    font-weight: 600;
+    line-height: 1.06;
+    letter-spacing: -0.02em;
+    max-width: 20em;
+}
+
+h1 .hollow {
+    color: transparent;
+    -webkit-text-stroke: 1.5px var(--ink);
+}
+
+.lede {
+    max-width: 48ch;
+    font-size: 1.08rem;
+    color: var(--ink-dim);
+    margin-top: 1.4rem;
+}
+
+.sec-head {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: clamp(1.6rem, 3.6vw, 2.4rem);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin-bottom: 0.5rem;
+}
+
+.sec-sub { color: var(--ink-dim); max-width: 54ch; margin-bottom: 2.75rem; }
+
+section.band { padding: 4.5rem 0; }
+section.tint { background: var(--paper-warm); }
+
+/* ---------- scenes ---------- */
+
+.scene { width: 100%; height: auto; display: block; }
+
+.stage-label {
+    font-family: 'Fira Code', monospace;
+    font-size: 15px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    fill: var(--ink-dim);
+}
+
+.plot-label {
+    font-family: 'Fira Code', monospace;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    fill: var(--soil-dark);
+}
+
+/* ---------- expandable detail ---------- */
+
+.more-btn {
+    margin-top: 1.1rem;
+    border: 0;
+    border-top: 1px solid var(--rule);
+    border-radius: 0;
+    background: none;
+    width: 100%;
+    padding: 0.85rem 0 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.76rem;
+    letter-spacing: 0.5px;
+    color: var(--water);
+    text-align: left;
+}
+
+.more-btn::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 6px solid currentColor;
+    border-top: 4.5px solid transparent;
+    border-bottom: 4.5px solid transparent;
+    transition: transform 0.2s ease;
+    flex: none;
+}
+
+.more-btn:hover { color: var(--ink); }
+.more-btn:hover::after { transform: translateX(3px); }
+
+/* ---------- modal sheet ---------- */
+
+.sheet {
+    border: 0;
+    padding: 0;
+    /* the `* { margin: 0 }` reset kills dialog's default margin:auto, which is what centres it */
+    margin: auto;
+    max-width: 620px;
+    width: calc(100% - 2rem);
+    max-height: 82vh;
+    border-radius: 6px;
+    background: var(--paper);
+    color: var(--ink);
+    box-shadow: 0 24px 70px rgba(44, 40, 35, 0.28);
+    overflow: visible;
+}
+
+.sheet::backdrop { background: rgba(44, 40, 35, 0.52); backdrop-filter: blur(2px); }
+
+.sheet-inner { padding: 2.25rem 2.25rem 2.5rem; overflow-y: auto; max-height: 82vh; }
+
+.sheet-kicker {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--crop);
+    margin-bottom: 0.35rem;
+}
+
+.sheet h4 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    padding-right: 2rem;
+}
+
+.sheet-close {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.9rem;
+    width: 34px;
+    height: 34px;
+    border: 1px solid var(--rule);
+    border-radius: 50%;
+    background: var(--paper);
+    color: var(--ink-dim);
+    font-size: 1.25rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: border-color 0.2s, color 0.2s;
+}
+
+.sheet-close:hover { border-color: var(--water); color: var(--ink); }
+
+.more-body { color: var(--ink-dim); font-size: 0.97rem; }
+.more-body p + p { margin-top: 0.8rem; }
+
+.more-body dl { display: grid; grid-template-columns: max-content 1fr; gap: 0.5rem 1.1rem; }
+
+.more-body dt {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--crop);
+    padding-top: 3px;
+}
+
+.more-body dd { margin: 0; }
+
+@media (max-width: 560px) {
+    .more-body dl { grid-template-columns: 1fr; gap: 0.15rem; }
+    .more-body dd { margin-bottom: 0.6rem; }
+}
+
+/* ---------- scene animation ---------- */
+
+.flow { stroke-dasharray: 22 30; animation: flow 1.6s linear infinite; }
+@keyframes flow { to { stroke-dashoffset: -52; } }
+
+.wheel { transform-box: fill-box; transform-origin: center; animation: spin 9s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.roll { transform-box: fill-box; transform-origin: center; animation: spin 1.5s linear infinite; }
+
+.crop { transform-box: fill-box; transform-origin: bottom center; animation: sway 4s ease-in-out infinite; }
+@keyframes sway {
+    0%, 100% { transform: rotate(-2.5deg); }
+    50%      { transform: rotate(2.5deg); }
+}
+
+.cloud { animation: drift 70s linear infinite; }
+@keyframes drift {
+    from { transform: translateX(-170px); }
+    to   { transform: translateX(1330px); }
+}
+
+.halo { animation: breathe 7s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+@keyframes breathe {
+    0%, 100% { opacity: 0.35; transform: scale(1); }
+    50%      { opacity: 0.6;  transform: scale(1.09); }
+}
+
+.bird { animation: cross 34s linear infinite; }
+@keyframes cross {
+    from { transform: translate(-80px, 20px); }
+    to   { transform: translate(1300px, -30px); }
+}
+
+/* scarecrow: a slow lean, pinned at the base of the post */
+.scare { transform-box: fill-box; transform-origin: bottom center; animation: lean 6s ease-in-out infinite; }
+@keyframes lean {
+    0%, 100% { transform: rotate(-1.2deg); }
+    50%      { transform: rotate(1.2deg); }
+}
+
+/* crows driven off the field */
+.crow-away { animation: away 9s ease-out infinite; }
+@keyframes away {
+    0%       { transform: translate(0, 0); opacity: 0; }
+    12%      { opacity: 1; }
+    100%     { transform: translate(240px, -130px); opacity: 0; }
+}
+
+.wing { transform-box: fill-box; transform-origin: right center; animation: flap 0.42s ease-in-out infinite; }
+@keyframes flap {
+    0%, 100% { transform: rotate(-26deg); }
+    50%      { transform: rotate(22deg); }
+}
+
+/* tractor crossing the field */
+.tractor { animation: pass 26s linear infinite; }
+@keyframes pass {
+    from { transform: translateX(-260px); }
+    to   { transform: translateX(1300px); }
+}
+
+.puff { animation: puff 2.6s ease-out infinite; transform-box: fill-box; transform-origin: center; }
+@keyframes puff {
+    0%   { opacity: 0.55; transform: translateY(0) scale(0.6); }
+    100% { opacity: 0;    transform: translateY(-34px) scale(1.5); }
+}
+
+/* falling harvest leaves */
+.leaf { animation: fall 7s ease-in infinite; transform-box: fill-box; }
+@keyframes fall {
+    0%   { opacity: 0; transform: translate(0, 0) rotate(0deg); }
+    15%  { opacity: 1; }
+    100% { opacity: 0; transform: translate(26px, 78px) rotate(220deg); }
+}
+
+/* ---------- field / project cards ---------- */
+
+/* stretch (default) keeps every box in a row the same height */
+.fields { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 2rem; }
+
+.field {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.field:hover { transform: translateY(-4px); box-shadow: 0 12px 28px rgba(44, 40, 35, 0.09); }
+
+.field-icon { height: 86px; margin-bottom: 1rem; }
+
+.field-kicker {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--crop);
+    margin-bottom: 0.3rem;
+}
+
+.field h3 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.34rem;
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+}
+
+.field p { color: var(--ink-dim); font-size: 1rem; flex: 1; }
+
+.stems { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 1.25rem; }
+
+.stem {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.76rem;
+    padding: 0.3rem 0.65rem;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    color: var(--ink-dim);
+}
+
+.field-link {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.72rem;
+    color: var(--water);
+    text-decoration: none;
+    margin-top: 1rem;
+}
+
+.field-link:hover { text-decoration: underline; }
+
+/* ---------- seasons ---------- */
+
+.seasons { display: grid; gap: 0; border-top: 1px solid var(--rule); }
+
+.season {
+    display: grid;
+    grid-template-columns: 150px 190px 1fr;
+    gap: 2.5rem;
+    padding: 2.5rem 0;
+    border-bottom: 1px solid var(--rule);
+    align-items: start;
+}
+
+.season-art { width: 150px; height: 150px; }
+
+.season-when {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.74rem;
+    letter-spacing: 1px;
+    color: var(--ink-dim);
+}
+
+.season-tag {
+    display: inline-block;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    color: var(--crop);
+}
+
+.season h3 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.15rem;
+}
+
+.season .who { color: var(--water); font-weight: 500; margin-bottom: 0.75rem; }
+.season p { color: var(--ink-dim); }
+
+/* ---------- toolshed rows ---------- */
+
+.shed { border-top: 1px solid var(--rule); }
+
+.shed-row {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 2.5rem;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--rule);
+    align-items: baseline;
+}
+
+.shed-label {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--crop);
+}
+
+.shed-items { color: var(--ink-dim); font-size: 1.05rem; line-height: 1.95; }
+.shed-items b { color: var(--ink); font-weight: 600; }
+
+/* ---------- footer / gate ---------- */
+
+footer {
+    background: var(--paper-warm);
+    border-top: 1px solid var(--rule);
+    padding: 3.5rem 1.5rem 2.5rem;
+    text-align: center;
+}
+
+footer .gate-head {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: clamp(1.5rem, 3.2vw, 2.1rem);
+    font-weight: 600;
+    margin-bottom: 0.6rem;
+}
+
+footer p { color: var(--ink-dim); max-width: 40ch; margin: 0 auto 1.75rem; }
+
+.gate-links { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+
+.gate-links a {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.8rem;
+    padding: 0.7rem 1.4rem;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    background: var(--paper);
+    color: var(--ink);
+    text-decoration: none;
+    transition: border-color 0.2s, transform 0.2s;
+}
+
+.gate-links a:hover { border-color: var(--water); transform: translateY(-2px); }
+
+.fineprint {
+    margin-top: 2.5rem;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.7rem;
+    color: var(--ink-dim);
+    opacity: 0.8;
+}
+
+/* ---------- responsive ---------- */
+
+@media (max-width: 860px) {
+    .season { grid-template-columns: 110px 1fr; gap: 1.5rem 1.75rem; }
+    .season-art { width: 110px; height: 110px; }
+    .season-meta { grid-column: 2; }
+    .season-body { grid-column: 2; }
+}
+
+@media (max-width: 720px) {
+    .shed-row { grid-template-columns: 1fr; gap: 0.6rem; padding: 1.2rem 0; }
+    .phead { padding-top: 2.5rem; }
+    .topbar nav { gap: 1.1rem; }
+    .topbar-inner { gap: 0.75rem; }
+    section.band { padding: 3rem 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .flow, .wheel, .roll, .crop, .cloud, .halo, .bird,
+    .scare, .crow-away, .wing, .tractor, .puff, .leaf {
+        animation: none;
+    }
+}

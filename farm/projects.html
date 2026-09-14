@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — Viraj Virk (concept)</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="proto-banner">
+    <span>prototype / concept test — not the live site</span>
+    <a href="../index.html">&larr; back to current portfolio</a>
+</div>
+
+<header class="topbar">
+    <div class="topbar-inner">
+        <a class="brand" href="index.html">Viraj Virk <span>/ the farm</span></a>
+        <nav>
+            <a href="index.html"><span class="nav-main">The Land</span><span class="nav-sub">home</span></a>
+            <a class="on" href="projects.html"><span class="nav-main">The Fields</span><span class="nav-sub">projects</span></a>
+            <a href="experience.html"><span class="nav-main">Seasons</span><span class="nav-sub">experience</span></a>
+            <a href="skills.html"><span class="nav-main">The Toolshed</span><span class="nav-sub">skills</span></a>
+        </nav>
+    </div>
+</header>
+
+<div class="wrap">
+    <section class="phead">
+        <div class="eyebrow">Projects · the fields</div>
+        <h1>Something has to <span class="hollow">keep the crows out.</span></h1>
+        <p class="lede">
+            Every pipeline needs a thing standing in the field turning away what shouldn't get in.
+            Schema checks, validation gates, monitoring — that's the scarecrow, and it does more for
+            output quality than any model choice.
+        </p>
+    </section>
+</div>
+
+<svg class="scene" viewBox="0 0 1200 430" role="img" aria-label="A scarecrow standing in a crop field with three crows flying away from it, illustrating validation rejecting malformed records.">
+    <defs>
+        <linearGradient id="skyGrad2" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%"   stop-color="var(--sky)"/>
+            <stop offset="100%" stop-color="var(--sky-low)"/>
+        </linearGradient>
+    </defs>
+
+    <rect width="1200" height="290" fill="url(#skyGrad2)"/>
+    <rect y="290" width="1200" height="140" fill="var(--ground)"/>
+
+    <g class="cloud" opacity="0.7" style="animation-duration:86s">
+        <ellipse cx="240" cy="64" rx="42" ry="17" fill="#fff"/>
+        <ellipse cx="272" cy="56" rx="30" ry="20" fill="#fff"/>
+    </g>
+
+    <!-- ===== crows being driven off ===== -->
+    <g class="crow-away" style="animation-delay:-.4s">
+        <g transform="translate(700,150)">
+            <ellipse rx="15" ry="9" fill="var(--ink)"/>
+            <circle cx="13" cy="-6" r="7" fill="var(--ink)"/>
+            <path d="M 19 -7 l 11 2 l -11 4 z" fill="var(--wheat)"/>
+            <path d="M -15 0 l -14 -6 l 3 8 z" fill="var(--ink)"/>
+            <path class="wing" d="M 4 -4 C -2 -21 -15 -23 -19 -12 C -12 -8 -4 -5 4 -4 Z" fill="var(--ink-dim)"/>
+        </g>
+    </g>
+    <g class="crow-away" style="animation-delay:-3.2s">
+        <g transform="translate(660,205) scale(.82)">
+            <ellipse rx="15" ry="9" fill="var(--ink)"/>
+            <circle cx="13" cy="-6" r="7" fill="var(--ink)"/>
+            <path d="M 19 -7 l 11 2 l -11 4 z" fill="var(--wheat)"/>
+            <path d="M -15 0 l -14 -6 l 3 8 z" fill="var(--ink)"/>
+            <path class="wing" d="M 4 -4 C -2 -21 -15 -23 -19 -12 C -12 -8 -4 -5 4 -4 Z" fill="var(--ink-dim)" style="animation-delay:-.15s"/>
+        </g>
+    </g>
+    <g class="crow-away" style="animation-delay:-6.1s">
+        <g transform="translate(712,238) scale(.7)">
+            <ellipse rx="15" ry="9" fill="var(--ink)"/>
+            <circle cx="13" cy="-6" r="7" fill="var(--ink)"/>
+            <path d="M 19 -7 l 11 2 l -11 4 z" fill="var(--wheat)"/>
+            <path d="M -15 0 l -14 -6 l 3 8 z" fill="var(--ink)"/>
+            <path class="wing" d="M 4 -4 C -2 -21 -15 -23 -19 -12 C -12 -8 -4 -5 4 -4 Z" fill="var(--ink-dim)" style="animation-delay:-.27s"/>
+        </g>
+    </g>
+
+    <!-- ===== the scarecrow ===== -->
+    <g class="scare">
+        <line x1="600" y1="158" x2="600" y2="330" stroke="var(--soil-dark)" stroke-width="9" stroke-linecap="round"/>
+        <line x1="516" y1="212" x2="684" y2="212" stroke="var(--soil-dark)" stroke-width="7" stroke-linecap="round"/>
+
+        <!-- cloth body -->
+        <path d="M 558 214 L 642 214 L 634 286 Q 620 296 600 288 Q 580 296 566 286 Z" fill="var(--barn)" opacity="0.9"/>
+        <path d="M 566 248 Q 600 258 634 248" fill="none" stroke="var(--barn-dark)" stroke-width="3" opacity="0.7"/>
+
+        <!-- straw at cuffs and hem -->
+        <g stroke="var(--wheat)" stroke-width="3" stroke-linecap="round">
+            <path d="M 520 212 l -12 -8"/><path d="M 520 214 l -14 1"/><path d="M 520 216 l -12 9"/>
+            <path d="M 680 212 l 12 -8"/><path d="M 680 214 l 14 1"/><path d="M 680 216 l 12 9"/>
+            <path d="M 576 290 l -5 14"/><path d="M 592 292 l -2 15"/><path d="M 610 292 l 2 15"/><path d="M 626 290 l 5 14"/>
+        </g>
+
+        <!-- head + hat -->
+        <circle cx="600" cy="150" r="27" fill="var(--paper-warm)" stroke="var(--soil)" stroke-width="3"/>
+        <g fill="var(--ink)">
+            <circle cx="591" cy="147" r="3.2"/><circle cx="609" cy="147" r="3.2"/>
+        </g>
+        <path d="M 591 161 q 9 6 18 0" fill="none" stroke="var(--ink)" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M 565 128 L 635 128" stroke="var(--soil-dark)" stroke-width="5" stroke-linecap="round"/>
+        <path d="M 578 128 L 600 96 L 622 128 Z" fill="var(--soil-dark)"/>
+    </g>
+
+    <text class="stage-label" x="600" y="368" text-anchor="middle">validate</text>
+    <text class="plot-label" x="600" y="392" text-anchor="middle">malformed records turned away</text>
+
+    <!-- ===== crop rows ===== -->
+    <g stroke="var(--crop)" stroke-width="3" fill="none" stroke-linecap="round">
+        <g class="crop" style="animation-delay:-.3s"><path d="M 120 330 L 120 292"/><path d="M 120 306 l -9 -7"/><path d="M 120 316 l 9 -7"/></g>
+        <g class="crop" style="animation-delay:-1.4s"><path d="M 180 330 L 180 286"/><path d="M 180 300 l 9 -7"/><path d="M 180 312 l -9 -7"/></g>
+        <g class="crop" style="animation-delay:-2.1s"><path d="M 240 330 L 240 294"/><path d="M 240 308 l -9 -7"/></g>
+        <g class="crop" style="animation-delay:-.9s"><path d="M 300 330 L 300 288"/><path d="M 300 302 l 9 -7"/><path d="M 300 314 l -9 -7"/></g>
+        <g class="crop" style="animation-delay:-1.8s"><path d="M 360 330 L 360 296"/><path d="M 360 310 l -9 -7"/></g>
+        <g class="crop" style="animation-delay:-.6s"><path d="M 420 330 L 420 290"/><path d="M 420 304 l 9 -7"/><path d="M 420 316 l -9 -7"/></g>
+        <g class="crop" style="animation-delay:-2.4s"><path d="M 480 330 L 480 294"/><path d="M 480 308 l -9 -7"/></g>
+        <g class="crop" style="animation-delay:-1.1s"><path d="M 720 330 L 720 290"/><path d="M 720 304 l 9 -7"/><path d="M 720 316 l -9 -7"/></g>
+        <g class="crop" style="animation-delay:-2.6s"><path d="M 780 330 L 780 296"/><path d="M 780 310 l -9 -7"/></g>
+        <g class="crop" style="animation-delay:-.4s"><path d="M 840 330 L 840 288"/><path d="M 840 302 l -9 -7"/><path d="M 840 314 l 9 -7"/></g>
+        <g class="crop" style="animation-delay:-1.9s"><path d="M 900 330 L 900 294"/><path d="M 900 308 l 9 -7"/></g>
+        <g class="crop" style="animation-delay:-.8s"><path d="M 960 330 L 960 290"/><path d="M 960 304 l -9 -7"/><path d="M 960 316 l 9 -7"/></g>
+        <g class="crop" style="animation-delay:-2.2s"><path d="M 1020 330 L 1020 296"/><path d="M 1020 310 l -9 -7"/></g>
+        <g class="crop" style="animation-delay:-1.5s"><path d="M 1080 330 L 1080 288"/><path d="M 1080 302 l 9 -7"/><path d="M 1080 314 l -9 -7"/></g>
+    </g>
+
+    <rect y="328" width="1200" height="16" fill="var(--soil)"/>
+    <g stroke="var(--ground-alt)" stroke-width="2" opacity="0.5">
+        <line x1="0" y1="400" x2="1200" y2="400"/>
+        <line x1="0" y1="416" x2="1200" y2="416"/>
+    </g>
+</svg>
+
+<section class="band tint">
+    <div class="wrap">
+        <h2 class="sec-head">What grew</h2>
+        <p class="sec-sub">Each plot named by what it produces, not by the framework it used.</p>
+
+        <div class="fields">
+
+            <div class="field">
+                <svg class="field-icon" viewBox="0 0 90 86" fill="none" aria-hidden="true">
+                    <rect x="6" y="62" width="78" height="14" rx="4" fill="var(--soil)"/>
+                    <g stroke="var(--crop)" stroke-width="3" stroke-linecap="round">
+                        <path d="M 24 64 L 24 30"/><path d="M 24 44 l -9 -8"/><path d="M 24 54 l 9 -8"/>
+                        <path d="M 46 64 L 46 22"/><path d="M 46 36 l 9 -8"/><path d="M 46 48 l -9 -8"/>
+                        <path d="M 68 64 L 68 34"/><path d="M 68 46 l -9 -8"/>
+                    </g>
+                    <path class="flow" d="M 4 16 C 26 20 44 12 64 16 C 74 18 82 14 88 12" stroke="var(--water)" stroke-width="4" stroke-linecap="round"/>
+                </svg>
+                <h3>AI voice receptionist</h3>
+                <p>A production voice agent taking live clinic calls end to end — intent, booking, rescheduling, no human in the loop.</p>
+                <div class="stems"><span class="stem">Pipecat</span><span class="stem">Real-time Speech</span><span class="stem">LLMs</span><span class="stem">Python</span></div>
+                <button class="more-btn" data-modal="p1">more on this</button>
+                <dialog class="sheet" id="p1">
+                    <button class="sheet-close" aria-label="Close">&times;</button>
+                    <div class="sheet-inner">
+                        <h4>AI voice receptionist</h4>
+                    <div class="more-body">
+                        <dl>
+                            <dt>Problem</dt>
+                            <dd>A doctor's clinic losing staff hours to inbound calls that were almost entirely booking and rescheduling.</dd>
+                            <dt>Build</dt>
+                            <dd>A real-time backend pipeline on Pipecat, orchestrating speech-to-text, LLM reasoning and text-to-speech inside a latency budget tight enough for natural turn-taking.</dd>
+                            <dt>Hard part</dt>
+                            <dd>Not the happy path — the edge cases. Interruptions mid-sentence, ambiguous speech, dead silence, and requests outside the agent's scope, each needing a fallback that doesn't strand the caller.</dd>
+                            <dt>Outcome</dt>
+                            <dd>Deployed and taking live calls end to end, managing the full booking and rescheduling flow without a human in the loop.</dd>
+                        </dl>
+                    </div>
+                    </div>
+                </dialog>
+            </div>
+
+            <div class="field">
+                <svg class="field-icon" viewBox="0 0 90 86" fill="none" aria-hidden="true">
+                    <rect x="6" y="62" width="78" height="14" rx="4" fill="var(--soil)"/>
+                    <g stroke="var(--wheat)" stroke-width="3" stroke-linecap="round">
+                        <path d="M 24 64 L 24 24"/><ellipse cx="24" cy="18" rx="6" ry="12" fill="var(--wheat)" stroke="none"/>
+                        <path d="M 46 64 L 46 30"/><ellipse cx="46" cy="24" rx="6" ry="11" fill="var(--wheat)" stroke="none"/>
+                        <path d="M 68 64 L 68 26"/><ellipse cx="68" cy="20" rx="6" ry="12" fill="var(--wheat)" stroke="none"/>
+                    </g>
+                </svg>
+                <h3>Industrial drawing pipeline</h3>
+                <p>ETL over multi-layer DXF files — extracting, validating and transforming geometry into something a compliance agent can reason about.</p>
+                <div class="stems"><span class="stem">Python</span><span class="stem">ezdxf</span><span class="stem">RAG</span><span class="stem">GNN</span><span class="stem">LangChain</span></div>
+                <button class="more-btn" data-modal="p2">more on this</button>
+                <dialog class="sheet" id="p2">
+                    <button class="sheet-close" aria-label="Close">&times;</button>
+                    <div class="sheet-inner">
+                        <h4>Industrial drawing pipeline</h4>
+                    <div class="more-body">
+                        <dl>
+                            <dt>Context</dt>
+                            <dd>A government-scale platform for the Goa Industrial Development Corporation, built under a Deloitte contract inside a compliance-audited delivery model.</dd>
+                            <dt>Problem</dt>
+                            <dd>Industrial drawing files arrive as multi-layer DXF with no consistent convention between sources — the same floor plan might be structured five different ways.</dd>
+                            <dt>Build</dt>
+                            <dd>ETL pipelines using ezdxf that extract, validate and transform the geometry, isolating floor plans, site plans and elevations regardless of how the source file was organised.</dd>
+                            <dt>Models</dt>
+                            <dd>CNN-based entity detection, StyleGAN for synthetic training data where real samples were thin, and Graph Neural Networks modelling the structural relationships between drawing elements.</dd>
+                            <dt>Feeds</dt>
+                            <dd>All of it into a RAG-based LLM compliance agent — Llama models orchestrated through LangChain — so the reasoning layer sees structure rather than raw vectors.</dd>
+                        </dl>
+                    </div>
+                    </div>
+                </dialog>
+            </div>
+
+            <div class="field">
+                <svg class="field-icon" viewBox="0 0 90 86" fill="none" aria-hidden="true">
+                    <rect x="6" y="62" width="78" height="14" rx="4" fill="var(--soil)"/>
+                    <circle cx="45" cy="36" r="16" fill="none" stroke="var(--crop)" stroke-width="3"/>
+                    <g stroke="var(--crop)" stroke-width="2.5" stroke-linecap="round">
+                        <path d="M 45 52 L 45 64"/><path d="M 29 36 L 15 36"/><path d="M 61 36 L 75 36"/><path d="M 45 20 L 45 9"/>
+                    </g>
+                    <circle cx="15" cy="36" r="4" fill="var(--crop)"/><circle cx="75" cy="36" r="4" fill="var(--crop)"/><circle cx="45" cy="9" r="4" fill="var(--crop)"/>
+                </svg>
+                <h3>Long-term memory layer</h3>
+                <p>Persistent recall for a chatbot that forgot everything between sessions — tenant-scoped, entity relationships held across conversations.</p>
+                <div class="stems"><span class="stem">mem0</span><span class="stem">pgvector</span><span class="stem">Multi-tenancy</span><span class="stem">JWT</span></div>
+                <button class="more-btn" data-modal="p3">more on this</button>
+                <dialog class="sheet" id="p3">
+                    <button class="sheet-close" aria-label="Close">&times;</button>
+                    <div class="sheet-inner">
+                        <h4>Long-term memory layer</h4>
+                    <div class="more-body">
+                        <dl>
+                            <dt>Problem</dt>
+                            <dd>An existing RAG chatbot had retrieval but no memory — every session started from zero, and it couldn't connect facts about the same person across conversations.</dd>
+                            <dt>Build</dt>
+                            <dd>Integrated mem0 to give it persistent recall plus entity-relationship awareness, so it holds who relates to what rather than just matching text.</dd>
+                            <dt>Architecture</dt>
+                            <dd>Designed to serve several client platforms from one service: JWT-scoped authentication, per-tenant vector database routing through a connection map, and pgvector-backed memory storage with metadata filtering.</dd>
+                            <dt>Isolation</dt>
+                            <dd>A shareable flag on each memory governs whether context can cross a tenant boundary — the piece that made one shared service acceptable instead of one deployment per client.</dd>
+                        </dl>
+                    </div>
+                    </div>
+                </dialog>
+            </div>
+
+            <div class="field">
+                <svg class="field-icon" viewBox="0 0 90 86" fill="none" aria-hidden="true">
+                    <rect x="6" y="62" width="78" height="14" rx="4" fill="var(--soil)"/>
+                    <g stroke="var(--wheat)" stroke-width="3" stroke-linecap="round">
+                        <path d="M 20 64 L 20 32"/><ellipse cx="20" cy="26" rx="5" ry="10" fill="var(--wheat)" stroke="none"/>
+                        <path d="M 38 64 L 38 22"/><ellipse cx="38" cy="16" rx="5" ry="11" fill="var(--wheat)" stroke="none"/>
+                        <path d="M 56 64 L 56 28"/><ellipse cx="56" cy="22" rx="5" ry="10" fill="var(--wheat)" stroke="none"/>
+                        <path d="M 72 64 L 72 20"/><ellipse cx="72" cy="14" rx="5" ry="11" fill="var(--wheat)" stroke="none"/>
+                    </g>
+                </svg>
+                <h3>Jammin.ai — audio analysis backend</h3>
+                <p>Stem separation, transcription and forced alignment chained into one orchestrated pipeline, each stage handing cleaner signal to the next.</p>
+                <div class="stems"><span class="stem">Demucs</span><span class="stem">CTC</span><span class="stem">Step Functions</span><span class="stem">Lambda</span></div>
+                <button class="more-btn" data-modal="p4">more on this</button>
+                <dialog class="sheet" id="p4">
+                    <button class="sheet-close" aria-label="Close">&times;</button>
+                    <div class="sheet-inner">
+                        <div class="sheet-kicker">jammin.ai</div>
+                        <h4>Audio analysis backend</h4>
+                    <div class="more-body">
+                        <dl>
+                            <dt>Problem</dt>
+                            <dd>An existing music-learning backend that was both too slow and not accurate enough — audio took too long to ingest, and the analysis on the other end was noisy.</dd>
+                            <dt>Build</dt>
+                            <dd>Sped up YouTube audio ingestion, improved transcription, and added 4-stem source separation with Demucs.</dd>
+                            <dt>Best result</dt>
+                            <dd>Chord detection already existed, but separation raised its accuracy substantially — handing it isolated instrument tracks instead of a mixed signal fixed the quality problem without touching the detection code.</dd>
+                            <dt>Timestamps</dt>
+                            <dd>CTC forced alignment between the audio and its transcription, which is what makes the output land on the right beat rather than approximately near it.</dd>
+                            <dt>Infrastructure</dt>
+                            <dd>Deployed on AWS with Step Functions orchestrating the stages across Lambda and EC2, backed by RDS and DynamoDB.</dd>
+                        </dl>
+                    </div>
+                    </div>
+                </dialog>
+                <a class="field-link" href="https://jammin.ai" target="_blank" rel="noopener">visit jammin.ai &rarr;</a>
+            </div>
+
+            <div class="field">
+                <svg class="field-icon" viewBox="0 0 90 86" fill="none" aria-hidden="true">
+                    <rect x="6" y="62" width="78" height="14" rx="4" fill="var(--soil)"/>
+                    <g stroke="var(--crop)" stroke-width="3" stroke-linecap="round" fill="none">
+                        <path d="M 18 64 L 18 40"/><path d="M 45 64 L 45 32"/><path d="M 72 64 L 72 40"/>
+                        <path d="M 18 40 L 45 32 L 72 40"/>
+                    </g>
+                    <circle cx="18" cy="40" r="5" fill="var(--crop)"/><circle cx="45" cy="32" r="6" fill="var(--crop)"/><circle cx="72" cy="40" r="5" fill="var(--crop)"/>
+                </svg>
+                <h3>Multi-node automation</h3>
+                <p>Ansible playbooks driving mixed-OS nodes from one control box, with Jenkins triggering playbook runs on every commit and Splunk watching all of it.</p>
+                <div class="stems"><span class="stem">Ansible</span><span class="stem">Jenkins</span><span class="stem">Splunk</span><span class="stem">CI/CD</span></div>
+                <button class="more-btn" data-modal="p5">more on this</button>
+                <dialog class="sheet" id="p5">
+                    <button class="sheet-close" aria-label="Close">&times;</button>
+                    <div class="sheet-inner">
+                        <h4>Multi-node automation</h4>
+                    <div class="more-body">
+                        <dl>
+                            <dt>Problem</dt>
+                            <dd>Configuring machines one at a time, by hand, with no shared record of what state any of them were actually in.</dd>
+                            <dt>Build</dt>
+                            <dd>Ansible playbooks driving multiple nodes running different operating systems from a single control node, so setup becomes a file rather than a sequence of remembered steps.</dd>
+                            <dt>Visibility</dt>
+                            <dd>Centralised monitoring for every managed node in Splunk, using reverse IP-based identification to route and organise logs by source machine.</dd>
+                            <dt>Automation</dt>
+                            <dd>A Jenkins pipeline watching a GitHub repository, building, testing and deploying on each commit — wired into Ansible so a pipeline run can trigger playbook execution directly, connecting CI to the infrastructure layer.</dd>
+                        </dl>
+                    </div>
+                    </div>
+                </dialog>
+            </div>
+
+            <div class="field">
+                <svg class="field-icon" viewBox="0 0 90 86" fill="none" aria-hidden="true">
+                    <rect x="6" y="62" width="78" height="14" rx="4" fill="var(--soil)"/>
+                    <g stroke="var(--crop)" stroke-width="3" stroke-linecap="round">
+                        <path d="M 30 64 L 30 34"/><path d="M 30 46 l -10 -8"/><path d="M 30 56 l 10 -8"/>
+                        <path d="M 60 64 L 60 28"/><path d="M 60 40 l 10 -8"/><path d="M 60 52 l -10 -8"/>
+                    </g>
+                    <path class="flow" d="M 8 14 C 30 20 52 10 84 16" stroke="var(--water)" stroke-width="4" stroke-linecap="round" style="animation-delay:-.5s"/>
+                </svg>
+                <h3>Exotel telephony for Bolna</h3>
+                <p>Telephony support contributed upstream to an open-source voice-agent framework, with schema-driven request handling across its orchestration endpoints.</p>
+                <div class="stems"><span class="stem">FastAPI</span><span class="stem">Pydantic</span><span class="stem">Open Source</span><span class="stem">Telephony</span></div>
+                <button class="more-btn" data-modal="p6">more on this</button>
+                <dialog class="sheet" id="p6">
+                    <button class="sheet-close" aria-label="Close">&times;</button>
+                    <div class="sheet-inner">
+                        <h4>Exotel telephony for Bolna</h4>
+                    <div class="more-body">
+                        <dl>
+                            <dt>Project</dt>
+                            <dd>Bolna, an open-source framework for orchestrating LLM voice agents, which supported Twilio and Plivo but not Exotel.</dd>
+                            <dt>Contribution</dt>
+                            <dd>Added Exotel telephony support alongside the existing providers, following the conventions the codebase already used rather than bolting on a parallel path.</dd>
+                            <dt>Build</dt>
+                            <dd>REST API request and response handling built and validated with Pydantic for schema-driven data models across the agent-orchestration endpoints, which is what keeps real-time behaviour predictable when a call is already in progress.</dd>
+                            <dt>Why it counts</dt>
+                            <dd>Working inside a production-grade, community-maintained codebase — reading an existing API surface, matching its patterns, and getting changes accepted upstream.</dd>
+                        </dl>
+                    </div>
+                    </div>
+                </dialog>
+                <a class="field-link" href="https://github.com/euphoricfenix/bolna_exotel" target="_blank" rel="noopener">view the repo &rarr;</a>
+            </div>
+
+            <div class="field">
+                <svg class="field-icon" viewBox="0 0 90 86" fill="none" aria-hidden="true">
+                    <rect x="6" y="62" width="78" height="14" rx="4" fill="var(--soil)"/>
+                    <g fill="none" stroke="var(--ink-dim)" stroke-width="3" stroke-linecap="round">
+                        <circle cx="34" cy="34" r="15"/><circle cx="58" cy="34" r="15"/>
+                    </g>
+                    <circle cx="34" cy="34" r="4" fill="var(--ink-dim)"/><circle cx="58" cy="34" r="4" fill="var(--ink-dim)"/>
+                    <path d="M 34 49 L 34 64" stroke="var(--crop)" stroke-width="3" stroke-linecap="round"/>
+                    <path d="M 58 49 L 58 64" stroke="var(--crop)" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+                <h3>Stereo image depth analysis</h3>
+                <p>CNN architectures built from scratch for depth estimation from stereo pairs, comparing monocular and YOLO-based approaches under a research timeline.</p>
+                <div class="stems"><span class="stem">Deep Learning</span><span class="stem">CNNs</span><span class="stem">Research</span><span class="stem">YOLO</span></div>
+                <button class="more-btn" data-modal="p7">more on this</button>
+                <dialog class="sheet" id="p7">
+                    <button class="sheet-close" aria-label="Close">&times;</button>
+                    <div class="sheet-inner">
+                        <h4>Stereo image depth analysis</h4>
+                    <div class="more-body">
+                        <dl>
+                            <dt>Where</dt>
+                            <dd>CSIR–CSIO Chandigarh, as a research intern — my first time owning a model end to end rather than following someone else's notebook.</dd>
+                            <dt>Goal</dt>
+                            <dd>Estimate depth from stereo image pairs, contributing to research on spatial awareness and 3D scene understanding.</dd>
+                            <dt>Build</dt>
+                            <dd>CNN architectures written and trained from scratch, deliberately rather than fine-tuning something pretrained, to understand what each layer was actually contributing.</dd>
+                            <dt>Comparison</dt>
+                            <dd>Evaluated several approaches against each other under a fixed research timeline, including monocular depth estimation and YOLO-based detection, and documented where each one broke down.</dd>
+                        </dl>
+                    </div>
+                    </div>
+                </dialog>
+            </div>
+
+            <div class="field">
+                <svg class="field-icon" viewBox="0 0 90 86" fill="none" aria-hidden="true">
+                    <rect x="6" y="62" width="78" height="14" rx="4" fill="var(--soil)"/>
+                    <path d="M 45 12 C 58 30 66 38 66 46 A 21 21 0 0 1 24 46 C 24 38 32 30 45 12 Z" fill="var(--water-pale)" stroke="var(--water)" stroke-width="3"/>
+                    <path d="M 36 44 q 9 7 18 0" fill="none" stroke="var(--water)" stroke-width="2.5" stroke-linecap="round"/>
+                </svg>
+                <h3>Personal VPN &amp; cloud setup</h3>
+                <p>A Linux server provisioned from scratch on EC2 with OpenVPN — network config, encrypted tunnels, certificate-based authentication.</p>
+                <div class="stems"><span class="stem">AWS EC2</span><span class="stem">OpenVPN</span><span class="stem">Networking</span><span class="stem">Linux</span></div>
+                <button class="more-btn" data-modal="p8">more on this</button>
+                <dialog class="sheet" id="p8">
+                    <button class="sheet-close" aria-label="Close">&times;</button>
+                    <div class="sheet-inner">
+                        <h4>Personal VPN &amp; cloud setup</h4>
+                    <div class="more-body">
+                        <dl>
+                            <dt>Why</dt>
+                            <dd>Wanting a VPN I actually controlled, and using it as an excuse to learn the networking layer properly instead of trusting a provider's app.</dd>
+                            <dt>Build</dt>
+                            <dd>Provisioned a Linux server on AWS EC2 from nothing, installed and configured OpenVPN, set up the routing and firewall rules, and established the encrypted tunnels.</dd>
+                            <dt>Auth</dt>
+                            <dd>Certificate-based user authentication rather than shared credentials, generating and distributing the client certs myself.</dd>
+                            <dt>Verification</dt>
+                            <dd>Tested end to end from a real client configuration, which is where most of the actual learning happened.</dd>
+                        </dl>
+                    </div>
+                    </div>
+                </dialog>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="gate-head">Open the gate</div>
+    <p>Open to conversations about backend, AI/LLM, and DevOps engineering work.</p>
+    <div class="gate-links">
+        <a href="mailto:virajvirk7@gmail.com">Email</a>
+        <a href="https://linkedin.com/in/virajvirk" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/euphoricfenix" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <div class="fineprint">concept prototype · original SVG illustration · <a href="../index.html">current portfolio</a></div>
+</footer>
+
+<script src="app.js"></script>
+
+</body>
+</html>
