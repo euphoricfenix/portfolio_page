@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Viraj Virk — DevOps & AI Engineer</title>
+    <title>Viraj Virk — Full Stack Developer | AI & Enterprise Systems</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
@@ -461,44 +461,41 @@
             background: var(--bg-secondary);
         }
 
-        .skills-grid {
+        .stack-list {
+            border-top: 1px solid var(--border);
+        }
+
+        .stack-row {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: 190px 1fr;
+            gap: 2.5rem;
+            padding: 1.75rem 0;
+            border-bottom: 1px solid var(--border);
+            align-items: baseline;
         }
 
-        .skill-category {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 2rem;
-            transition: all 0.3s;
-        }
-
-        .skill-category:hover {
-            border-color: var(--accent-green);
-        }
-
-        .skill-category h3 {
-            font-size: 1.1rem;
-            color: var(--accent-green);
-            margin-bottom: 1.5rem;
+        .stack-label {
             font-family: 'Fira Code', monospace;
+            font-size: 0.75rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--accent-green);
         }
 
-        .skill-items {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-
-        .skill-tag {
-            padding: 0.5rem 1rem;
-            background: rgba(74, 222, 128, 0.1);
-            border: 1px solid rgba(74, 222, 128, 0.2);
-            border-radius: 4px;
-            font-size: 0.85rem;
+        .stack-items {
             color: var(--text-dim);
+            font-size: 1.05rem;
+            line-height: 2;
+        }
+
+        .stack-items b {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .stack-note {
+            opacity: 0.6;
+            font-size: 0.9rem;
         }
 
         /* Contact */
@@ -580,9 +577,14 @@
                 padding-left: 2rem;
             }
 
-            .projects-grid,
-            .skills-grid {
+            .projects-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .stack-row {
+                grid-template-columns: 1fr;
+                gap: 0.75rem;
+                padding: 1.25rem 0;
             }
         }
     </style>
@@ -613,12 +615,13 @@
             </div>
 
             <h1>Hi, I'm <span class="name">Viraj Virk</span></h1>
-            <h2>Builder, DevOps Engineer & AI Product Developer</h2>
+            <h2>Full Stack & AI Engineer</h2>
 
             <p class="hero-description">
-                Fresh CS grad with entrepreneurial drive, building AI-powered products and scalable systems. 
-                I bridge the gap between cutting-edge AI and real-world applications—from automating workflows 
-                to deploying production systems on AWS. Passionate about creating things that solve actual problems.
+                Currently building a government-scale enterprise platform for a Deloitte-contracted client—Python backend
+                services, ETL/data integration, and REST APIs. I work across the stack that makes AI actually ship: RAG
+                pipelines, LLM services, computer vision models, and the data plumbing that feeds them. Comfortable in
+                compliance-audited delivery models and production troubleshooting.
             </p>
 
             <div class="terminal-block">
@@ -630,11 +633,11 @@
                 <div class="terminal-content">
                     <div><span class="terminal-prompt">viraj@dev:~$</span> cat expertise.txt</div>
                     <div class="terminal-output">
-→ Python development & automation<br>
-→ DevOps (Docker, CI/CD, AWS infrastructure)<br>
-→ GenAI application deployment (LangChain, LLMs)<br>
-→ System integration & API orchestration<br>
-→ Cloud-native engineering (Lambda, EC2, S3)
+→ Python backend & ETL/data integration<br>
+→ RAG pipelines & LLM application deployment (LangChain, Llama)<br>
+→ DevOps (Docker, Kubernetes, Jenkins, Ansible, AWS)<br>
+→ Computer vision & deep learning (CNN, GNN, StyleGAN)<br>
+→ REST API design & enterprise system integration
                     </div>
                 </div>
             </div>
@@ -661,22 +664,55 @@
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="work-header">
-                        <h3 class="work-title">Part-Time Developer</h3>
-                        <div class="work-company">Freelance / Contract</div>
-                        <div class="work-date">Aug 2025 – Present</div>
+                        <h3 class="work-title">Full Stack Developer</h3>
+                        <div class="work-company">Kudzu Infotech — Contractor for Deloitte (Goa IDC)</div>
+                        <div class="work-date">Jan 2026 – Present</div>
                     </div>
                     <p class="work-description">
-                        Worked with an early-stage startup building production-grade automation tools—developed a web scraper 
-                        extracting e-commerce design data into SQL databases with robust error handling and scheduling. Currently 
-                        collaborating with a policy think tank on a full website redesign to modernize their digital presence, 
-                        improve accessibility, and enhance user engagement for policy researchers and stakeholders.
+                        Building a government-scale enterprise platform for the Goa Industrial Development Corporation,
+                        developing backend services in Python that power a RAG-based LLM compliance agent (Llama models
+                        orchestrated via LangChain). Designing and maintaining ETL pipelines (ezdxf) that extract, validate,
+                        and transform structured geometric data from complex, multi-layer industrial drawing files. Building
+                        the CV and graph models behind compliance reasoning, and integrating enterprise systems through
+                        internal APIs within a Deloitte-contracted, compliance-audited delivery model.
+                    </p>
+                    <div class="work-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">RAG</span>
+                        <span class="tag">LangChain</span>
+                        <span class="tag">ETL Pipelines</span>
+                        <span class="tag">Computer Vision</span>
+                        <span class="tag">GNN</span>
+                        <span class="tag">StyleGAN</span>
+                        <span class="tag">Enterprise</span>
+                        <span class="tag">Government</span>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="work-header">
+                        <h3 class="work-title">Part-Time Developer</h3>
+                        <div class="work-company">Freelance / Contract</div>
+                        <div class="work-date">Aug 2025 – Dec 2025</div>
+                    </div>
+                    <p class="work-description">
+                        Worked with an early-stage startup building production-grade automation tools—developed a web scraper
+                        extracting e-commerce design data into SQL databases with robust error handling and scheduling.
+                        Collaborated with a policy think tank on a full website redesign to modernize their digital presence,
+                        improve accessibility, and enhance user engagement for policy researchers and stakeholders. Also
+                        worked as a freelance contractor for Dusker AI on RLHF-related technical tasks supporting LLM
+                        training—terminal automation, benchmarking, tooling development, script execution, and technical
+                        troubleshooting, with each task independently reviewed and approved for quality.
                     </p>
                     <div class="work-tags">
                         <span class="tag">Python</span>
                         <span class="tag">Web Scraping</span>
                         <span class="tag">SQL</span>
-                        <span class="tag">Automation</span>
-                        <span class="tag">Web Development</span>
+                        <span class="tag">RLHF</span>
+                        <span class="tag">LLM Training</span>
+                        <span class="tag">Terminal Automation</span>
+                        <span class="tag">Benchmarking</span>
                         <span class="tag">Client Projects</span>
                     </div>
                 </div>
@@ -689,9 +725,10 @@
                         <div class="work-date">Mar 2025 – Jul 2025</div>
                     </div>
                     <p class="work-description">
-                        Designed, developed, and deployed generative AI applications with the R&D team. Led prompt engineering, 
-                        fine-tuning, and model evaluation. Successfully deployed scalable cloud-native applications on AWS using 
-                        Lambda, EC2, S3, RDS, and DynamoDB. Produced comprehensive documentation and user guides for internal teams.
+                        Designed, developed, and deployed LLM-powered applications end-to-end with the R&D team—backend
+                        services for an audio-analysis platform, and a multi-tenant long-term memory layer for an existing
+                        RAG chatbot. Owned prompt engineering, model evaluation, and cloud-native deployment on AWS, plus
+                        technical documentation for internal teams.
                     </p>
                     <div class="work-tags">
                         <span class="tag">GenAI</span>
@@ -735,41 +772,111 @@
 
             <div class="projects-grid">
                 <div class="project-card">
+                    <h3>AI Voice Receptionist for Healthcare</h3>
+                    <p>
+                        Designed and deployed a production voice AI agent for a doctor's clinic, handling live phone calls
+                        end-to-end—understanding intent and managing the full appointment-booking and rescheduling flow
+                        without human intervention. Built the real-time backend pipeline on Pipecat, orchestrating
+                        speech-to-text, LLM reasoning, and text-to-speech with low enough latency for natural conversation.
+                        Tuned prompts for clinical interaction and tested against edge cases—interruptions, ambiguous speech,
+                        silence, out-of-scope requests—with fallback handling for unresolvable cases.
+                    </p>
+                    <div class="work-tags">
+                        <span class="tag">Pipecat</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">Real-time Speech</span>
+                        <span class="tag">LLMs</span>
+                        <span class="tag">Voice AI</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
                     <div class="project-header">
-                        <h3>Conversational AI / Voice AI</h3>
+                        <h3>Bolna Voice AI — Exotel Telephony Integration</h3>
                         <a href="https://github.com/euphoricfenix/bolna_exotel.git" target="_blank" style="color: var(--accent); font-size: 1.5rem; text-decoration: none; margin-left: auto;" title="View on GitHub">→</a>
                     </div>
-                    
+
                     <p>
-                        Most recent project: Advanced voice-based conversational AI system enabling natural language interactions. 
-                        Integrated speech-to-text, LLM processing, and text-to-speech for seamless voice conversations. 
-                        Built with modern AI APIs and real-time audio processing capabilities.
+                        Contributed Exotel telephony support to Bolna, an open-source LLM voice-agent orchestration framework,
+                        alongside its existing Twilio/Plivo integrations. Built and validated REST API request/response
+                        handling using Pydantic for schema-driven data models across agent-orchestration endpoints, ensuring
+                        reliable real-time voice-agent behavior. Worked directly within a production-grade,
+                        community-maintained codebase, contributing changes back upstream.
                     </p>
                     <div class="work-tags">
-                        <span class="tag">Voice AI</span>
-                        <span class="tag">LLMs</span>
-                        <span class="tag">Speech Processing</span>
-                        <span class="tag">Real-time Audio</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">FastAPI</span>
+                        <span class="tag">Pydantic</span>
+                        <span class="tag">REST APIs</span>
+                        <span class="tag">Telephony</span>
+                        <span class="tag">Open Source</span>
                     </div>
                 </div>
 
                 <div class="project-card">
-                    <h3>GenAI Application (Sentellent Internship)</h3>
+                    <h3>Multi-Node Infrastructure Automation</h3>
                     <p>
-                        Production generative AI application deployed on AWS cloud infrastructure. Integrated advanced LLM models 
-                        with prompt engineering and fine-tuning. Implemented scalable architecture using Lambda, EC2, S3, RDS, 
-                        and DynamoDB for cloud-native deployment with comprehensive documentation.
+                        Wrote Ansible playbooks to configure and manage multiple nodes running different operating systems
+                        from a single parent/control node. Set up centralized monitoring for all managed nodes in Splunk
+                        using reverse IP-based identification to route logs by source machine. Built a Jenkins CI/CD pipeline
+                        that watches a GitHub repository for new commits, then automatically builds, tests, and deploys on
+                        each change—integrated with Ansible so pipeline runs trigger playbook execution directly.
                     </p>
                     <div class="work-tags">
-                        <span class="tag">GenAI</span>
-                        <span class="tag">AWS</span>
+                        <span class="tag">Ansible</span>
+                        <span class="tag">Jenkins</span>
+                        <span class="tag">Splunk</span>
+                        <span class="tag">CI/CD</span>
+                        <span class="tag">Infrastructure Automation</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Jammin.ai — Audio Analysis Backend</h3>
+                        <a href="https://jammin.ai" target="_blank" style="color: var(--accent); font-size: 1.5rem; text-decoration: none; margin-left: auto;" title="Visit Jammin.ai">→</a>
+                    </div>
+
+                    <p>
+                        Reworked the backend of a music-learning platform for latency and output quality. Sped up YouTube
+                        audio ingestion, improved transcription, and added 4-stem source separation with Demucs—which
+                        raised the accuracy of the existing chord-detection stage by feeding it isolated instrument tracks
+                        instead of a mixed signal. Implemented CTC forced alignment between audio and transcription to
+                        produce accurate timestamps. Deployed on AWS with Step Functions orchestrating the pipeline across
+                        Lambda and EC2, backed by RDS and DynamoDB.
+                    </p>
+                    <div class="work-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Demucs</span>
+                        <span class="tag">CTC Forced Alignment</span>
+                        <span class="tag">Step Functions</span>
                         <span class="tag">Lambda</span>
-                        <span class="tag">Production Deploy</span>
+                        <span class="tag">Audio ML</span>
                     </div>
                 </div>
 
                 <div class="project-card">
-                    <h3>Stereo Depth Analysis Model</h3>
+                    <h3>Multi-Tenant RAG Memory Service</h3>
+                    <p>
+                        Gave an existing RAG chatbot long-term memory by integrating mem0, replacing single-session context
+                        with persistent recall and entity-relationship awareness across conversations. Designed the
+                        architecture to serve multiple client platforms from one service: JWT-scoped authentication,
+                        per-tenant vector database routing through a connection map, and pgvector-backed memory storage
+                        with metadata filtering and a shareable flag governing cross-tenant context access.
+                    </p>
+                    <div class="work-tags">
+                        <span class="tag">mem0</span>
+                        <span class="tag">RAG</span>
+                        <span class="tag">pgvector</span>
+                        <span class="tag">Pinecone</span>
+                        <span class="tag">PostgreSQL</span>
+                        <span class="tag">Multi-tenancy</span>
+                        <span class="tag">JWT</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Stereo Image Depth Analysis</h3>
                     <p>
                         Research project at CSIR-CSIO: Deep learning computer vision model for depth estimation in stereo images. 
                         Built CNN architectures from scratch, explored monocular depth estimation and YOLO integration. 
@@ -780,22 +887,6 @@
                         <span class="tag">Computer Vision</span>
                         <span class="tag">CNNs</span>
                         <span class="tag">Research</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <h3>Forex Trading Bot</h3>
-                    
-                    <p>
-                        Real-time forex trading chatbot with complete ML pipeline. Scraped 10,000+ data points, integrated APIs 
-                        for live sentiment data. Used TensorFlow and NLP to train models interpreting market trends and providing 
-                        actionable insights based on processed data.
-                    </p>
-                    <div class="work-tags">
-                        <span class="tag">ML</span>
-                        <span class="tag">TensorFlow</span>
-                        <span class="tag">NLP</span>
-                        <span class="tag">APIs</span>
                     </div>
                 </div>
 
@@ -843,75 +934,45 @@
             <div class="section-label">Tech Stack</div>
             <h2 class="section-title">What I Work With</h2>
 
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>// Languages</h3>
-                    <div class="skill-items">
-                        <span class="skill-tag">Python (Strong)</span>
-                        <span class="skill-tag">Java</span>
-                        <span class="skill-tag">C/C++</span>
-                        <span class="skill-tag">SQL</span>
-                        <span class="skill-tag">Bash</span>
-                    </div>
+            <div class="stack-list">
+                <div class="stack-row">
+                    <div class="stack-label">Languages</div>
+                    <div class="stack-items"><b>Python</b> · JavaScript · SQL · C/C++ · Bash</div>
                 </div>
 
-                <div class="skill-category">
-                    <h3>// DevOps & Cloud</h3>
-                    <div class="skill-items">
-                        <span class="skill-tag">Docker</span>
-                        <span class="skill-tag">Kubernetes</span>
-                        <span class="skill-tag">Git/GitHub</span>
-                        <span class="skill-tag">CI/CD</span>
-                        <span class="skill-tag">AWS (EC2, S3, Lambda, RDS)</span>
-                        <span class="skill-tag">Linux</span>
-                        <span class="skill-tag">Nginx</span>
-                    </div>
+                <div class="stack-row">
+                    <div class="stack-label">AI &amp; LLMs</div>
+                    <div class="stack-items"><b>LangChain</b> · <b>RAG Pipelines</b> · GraphRAG · mem0 · Prompt Engineering · GNN · StyleGAN · Deep Learning (CNN, TensorFlow) · Audio ML (Demucs, CTC) · MCP</div>
                 </div>
 
-                <div class="skill-category">
-                    <h3>// Python Ecosystem</h3>
-                    <div class="skill-items">
-                        <span class="skill-tag">Flask</span>
-                        <span class="skill-tag">FastAPI</span>
-                        <span class="skill-tag">Streamlit</span>
-                        <span class="skill-tag">asyncio</span>
-                        <span class="skill-tag">Web Scraping</span>
-                        <span class="skill-tag">Automation</span>
-                    </div>
+                <div class="stack-row">
+                    <div class="stack-label">Backend &amp; APIs</div>
+                    <div class="stack-items"><b>FastAPI</b> · Flask · REST API Design · Pydantic · Webhooks · asyncio</div>
                 </div>
 
-                <div class="skill-category">
-                    <h3>// AI/ML & Data</h3>
-                    <div class="skill-items">
-                        <span class="skill-tag">TensorFlow</span>
-                        <span class="skill-tag">LangChain</span>
-                        <span class="skill-tag">OpenCV</span>
-                        <span class="skill-tag">NLP</span>
-                        <span class="skill-tag">Prompt Engineering</span>
-                        <span class="skill-tag">LLMs</span>
-                    </div>
+                <div class="stack-row">
+                    <div class="stack-label">Frontend</div>
+                    <div class="stack-items">React · Streamlit · React Native <span class="stack-note">(learning)</span></div>
                 </div>
 
-                <div class="skill-category">
-                    <h3>// Monitoring & Ops</h3>
-                    <div class="skill-items">
-                        <span class="skill-tag">Splunk</span>
-                        <span class="skill-tag">Linux Logging</span>
-                        <span class="skill-tag">Snort IDS</span>
-                        <span class="skill-tag">Process Automation</span>
-                        <span class="skill-tag">Cron Jobs</span>
-                    </div>
+                <div class="stack-row">
+                    <div class="stack-label">DevOps &amp; Cloud</div>
+                    <div class="stack-items"><b>Docker</b> · <b>AWS</b> (EC2, Lambda, Step Functions, S3, RDS) · Kubernetes · Jenkins · Ansible · CI/CD · Git · Linux · Nginx</div>
                 </div>
 
-                <div class="skill-category">
-                    <h3>// Soft Skills</h3>
-                    <div class="skill-items">
-                        <span class="skill-tag">Technical Writing</span>
-                        <span class="skill-tag">Client Communication</span>
-                        <span class="skill-tag">Team Leadership</span>
-                        <span class="skill-tag">Problem Solving</span>
-                        <span class="skill-tag">Adaptability</span>
-                    </div>
+                <div class="stack-row">
+                    <div class="stack-label">Data &amp; ETL</div>
+                    <div class="stack-items"><b>ETL Pipeline Design</b> · ezdxf (DXF) · Geometric/Spatial Data · pgvector · PostgreSQL · DynamoDB · SQLite · Pandas · Web Scraping</div>
+                </div>
+
+                <div class="stack-row">
+                    <div class="stack-label">Monitoring</div>
+                    <div class="stack-items">Splunk · Linux Logging · Snort IDS · Process Automation · Cron</div>
+                </div>
+
+                <div class="stack-row">
+                    <div class="stack-label">Strengths</div>
+                    <div class="stack-items">Technical Writing · Client Communication · Team Leadership · Problem Solving · Adaptability</div>
                 </div>
             </div>
         </div>
@@ -924,7 +985,7 @@
                 <div class="section-label">Get in Touch</div>
                 <h2>Let's Build Something</h2>
                 <p>
-                    Open to full-time opportunities in DevOps, Cloud Engineering, Python Development, or AI/ML roles. 
+                    Open to conversations about Full Stack, Backend, AI/LLM, and DevOps engineering roles.
                     Also available for freelance projects and consulting work.
                 </p>
 
@@ -985,7 +1046,7 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('.timeline-item, .project-card, .skill-category').forEach(el => {
+        document.querySelectorAll('.timeline-item, .project-card, .stack-list').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(30px)';
             el.style.transition = 'all 0.6s ease-out';
