@@ -555,6 +555,19 @@ footer p { color: var(--ink-dim); max-width: 40ch; margin: 0 auto 1.75rem; }
     .nav-sub { display: none; }
     .nav-main { font-size: 0.82rem; }
     .topbar nav a { padding-bottom: 2px; }
+
+    /* A 110px art column leaves the prose about 60% of a phone's width, so it
+       wraps every few words while the space under the art sits empty. Shrink
+       the art, sit the dates beside it, and let the text span the full row. */
+    .season {
+        grid-template-columns: 64px 1fr;
+        gap: 0.9rem 1rem;
+        padding: 2rem 0;
+    }
+
+    .season-art { width: 64px; height: 64px; }
+    .season-meta { grid-column: 2; align-self: center; }
+    .season-body { grid-column: 1 / -1; }
 }
 
 @media (max-width: 400px) {
