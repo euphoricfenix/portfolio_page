@@ -39,23 +39,6 @@ body {
 
 .wrap { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
 
-/* ---------- prototype banner ---------- */
-
-.proto-banner {
-    background: var(--ink);
-    color: var(--paper);
-    font-family: 'Fira Code', monospace;
-    font-size: 0.72rem;
-    letter-spacing: 1px;
-    padding: 0.55rem 1.5rem;
-    display: flex;
-    justify-content: space-between;
-    gap: 1rem;
-    flex-wrap: wrap;
-}
-
-.proto-banner a { color: var(--water-pale); }
-
 /* ---------- nav ---------- */
 
 .topbar {
